@@ -1,0 +1,123 @@
+/*page stuff*/
+
+/*BMO*/
+body {
+	background-color: aquamarine;
+}
+#bmoHimself{
+	background-image: url("bmo.png");
+	height: 700px; 
+	width: 500%;
+	margin-left: 25%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+#buttonInterface {
+	height: 230px;
+	width: 416px;
+	padding-top: 34px;
+	margin-left: 1%;
+	margin-top: 434px;
+	background-color: #67BDB0;
+	position: relative;
+	justify-content: flex-end;
+}
+/*Buttons*/
+#leftButtons{
+	height: 150px;
+	width: 150px;
+	float: left;
+}
+#gameOperators{
+	margin-left: 14%;
+}
+#rightButtons{
+	height: 150px;
+	width: 250px;
+	border: 2px, solid black;
+	float: left;
+	margin-left: 16px;
+}
+#cross {
+  background: #FBDF50;
+  height: 130px;
+  position: relative;
+  width: 40px;
+  margin-left: 31%;
+  margin-bottom: 10%;
+}
+#cross:after {
+  background: #FBDF50;
+  content: "";
+  height: 40px;
+  left: -45px;
+  position: absolute;
+  top: 45px;
+  width: 130px;
+}
+#triangle {
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 60px solid #3BE0F3;
+	float: left;
+	opacity: 0.6;
+}
+#smallCircle {
+	width: 60px;
+	height: 60px;
+	background: #3CF55A;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	float: left;
+	margin-left: -2%;
+	opacity: 0.6;
+}
+#largeCircle {
+	width: 100px;
+	height: 100px;
+	background: #F92467;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	float: left;
+	margin-top: 14%;
+	margin-left: 4%;
+	opacity: 0.6;
+}
+#start{
+	height: 28px;
+	width: 60px;
+	background-color: blue;
+	font: 18px;
+	color: white;
+	border-radius: 25px;
+}
+#select{
+	height: 28px;
+	width: 60px;
+	background-color: blue;
+	font: 18px;
+	color: white;
+	border-radius: 25px;
+}
+.lit {
+	opacity: 1;
+}
+#cross{
+	opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
