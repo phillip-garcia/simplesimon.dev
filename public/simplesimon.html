@@ -6,8 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="/simple.css">
 </head>
 <body>
+<div id="infoBox">
+	Score:     
+	Level:    
+</div>
 <div id="bmoHimself">
-<script type="text/javascript" src="simplesimon.js"></script>
+	<div id="gameStatus">
+		You LOST!!!!!
+	</div>
+<!-- <script type="text/javascript" src="simplesimon.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<div id="buttonInterface">
 		<div id="leftButtons">
@@ -26,23 +33,49 @@
 <script>
 
 //functions//
-$(document).ready(function() {
-    $('.buttons').click(
-        function() {
-            $(this).css('opacity', '1');
-        },
-        function() {
-            $(this).css('opacity', '1');
-        }
-    );
-});
+var pattern = [];
+var highScore = 2000; 
+
+function randomNumber(amount) {
+	var random = Math.floor(Math.random() + (amount) + 1);
+	return random;
+}
+
+function animation() {
+	$('.buttons').ready(function() {
+			$(this).animate({
+				opacity: "1"
+			}, 500).animate({
+				opacity: ".5"
+			});
+	});
+}
+function runTheGame() {
+	var i = 0;
+	var interval = setInterval(function() {
+	animation(pattern[i]);
+		   i++;
+		   if (i <= pattern.length) {
+	clearInterval(interval);
+		   }
+	}, 600);
+}
+
 
 //buttons//
-//$(document).ready(function(){
-//	$('#start').on('mouseup') function(){
-//		console.log()
-//	}
-//});
+
+$('.buttons').click(function() {
+		$(this).animate({
+			opacity: "1"
+		}, 250).animate({
+			opacity: ".5"
+		});
+});
+$('#start').click(function(){
+	runTheGame();
+	console.log(runTheGame)
+});
+
 
 </script>
 </div>

@@ -2,12 +2,15 @@
 
 /*BMO*/
 body {
-	background-color: aquamarine;
+	background-color: #2C5954;
+	background-image: url("adventure_time_background.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 #bmoHimself{
 	background-image: url("bmo.png");
 	height: 700px; 
-	width: 500%;
+	width: 520px;
 	margin-left: 25%;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -17,8 +20,8 @@ body {
 	height: 230px;
 	width: 416px;
 	padding-top: 34px;
-	margin-left: 1%;
-	margin-top: 434px;
+	margin-left: 10%;
+	margin-top: 73%;
 	background-color: #67BDB0;
 	position: relative;
 	justify-content: flex-end;
@@ -61,9 +64,9 @@ body {
 	height: 0;
 	border-left: 30px solid transparent;
 	border-right: 30px solid transparent;
-	border-bottom: 60px solid #3BE0F3;
+	border-bottom: 60px solid #3EEBFF;
 	float: left;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 #smallCircle {
 	width: 60px;
@@ -74,7 +77,7 @@ body {
 	border-radius: 50px;
 	float: left;
 	margin-left: -2%;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 #largeCircle {
 	width: 100px;
@@ -86,7 +89,7 @@ body {
 	float: left;
 	margin-top: 14%;
 	margin-left: 4%;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 #start{
 	height: 28px;
@@ -108,7 +111,25 @@ body {
 	opacity: 1;
 }
 #cross{
-	opacity: 0.6;
+	opacity: 0.5;
+}
+#infoBox {
+	background-color: lightgrey;
+	height:60px;
+	width: 85px;
+	float: left;
+	justify-content: space-around;
+}
+#gameStatus {
+	background-color: #D2FCE4;
+    height: 230px;
+    width: 384px;
+    margin-top: 8%;
+    margin-left: 13%;
+    position: relative;
+    float: left;
+    font-size: 30px;
+    visibility: hidden;
 }
 
 
