@@ -131,6 +131,12 @@ body {
     font-size: 30px;
     visibility: hidden;
 }
+#title {
+	color: white;
+	font-size: 40px;
+	font-align: center;
+	margin-left: 38%;
+}
 
 
 

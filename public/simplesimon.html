@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="/simple.css">
 </head>
 <body>
+<h2 id="title">BMO Says....</h2>
 <div id="infoBox">
 	Score:     
 	Level:    
@@ -34,46 +35,89 @@
 
 //functions//
 var pattern = [];
+var index = 0;
 var highScore = 2000; 
+var active;
+var buttons;
 
-function randomNumber(amount) {
-	var random = Math.floor(Math.random() + (amount) + 1);
+//function startGame () {
+//	pattern = [];
+//	userInput = [];
+//	level = 0;
+//	active = true;
+//		$('p[data-action="lose"]').hide();
+//		$('#start').on('click', function ();
+//	newLevel();
+//}
+
+//function newLevel() {
+//	 $('[data-level]').text(++level);
+//		 colorSequence.push(randomNumber());
+//		 animate(colorSequence);
+//}	
+
+function randomNumber() {
+	var random = Math.floor(Math.random() * (4)) + 1;
 	return random;
 }
 
-function animation() {
-	$('.buttons').ready(function() {
-			$(this).animate({
-				opacity: "1"
-			}, 500).animate({
-				opacity: ".5"
-			});
-	});
+function animateButtons(array) {
+	var i = 0;
+	var solution = setInterval(function(){
+		$('[data-value=' + array[i] + ']').animate({
+			opacity: "1"
+		}, 500).animate({
+			opacity: ".5"
+		}, 500);
+		i++;
+		if(i == array.length) {
+			clearInterval(solution);
+		}; 
+	}, 500)
 }
 function runTheGame() {
-	var i = 0;
-	var interval = setInterval(function() {
-	animation(pattern[i]);
-		   i++;
-		   if (i <= pattern.length) {
-	clearInterval(interval);
-		   }
-	}, 600);
+	var interval = setTimeout( function() {
+		pattern.push(randomNumber());
+		animateButtons(pattern);
+		index++;
+	}, 500);
 }
-
-
+//function solution () {
+//	userInput.push($('.buttons'))
+//}
+//		if (index == pattern.length) {
+//			pattern.length = 0;
+//		}
 //buttons//
+	var i = 0
 
 $('.buttons').click(function() {
-		$(this).animate({
-			opacity: "1"
-		}, 250).animate({
-			opacity: ".5"
-		});
+	$(this).animate({
+		opacity: "1"
+	}, 250).animate({
+		opacity: ".5"
+	});
+	if (pattern[i] == $(this).data("value")) {
+		i++;
+		console.log($(this).data('value'));
+		if(pattern.length == i) {
+			i = 0;
+			pattern.push(randomNumber());
+			console.log(pattern);
+			animateButtons(pattern);
+		} 
+	} else {
+		i = 0;
+		pattern = [];
+	}
 });
+
+
+
+
+
 $('#start').click(function(){
 	runTheGame();
-	console.log(runTheGame)
 });
 
 
